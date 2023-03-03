@@ -1,0 +1,27 @@
+service: article-example
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: sa-east-1
+
+functions:
+  light:
+    handler: functions/light.handler
+    events:
+      - http:
+          path: /light
+          method: GET
+
+  heavy:
+    handler: functions/heavy.handler
+    events:
+      - http:
+          path: /heavy
+          method: GET
+
+package: 
+  individually: true
+  
+plugins:
+  - serverless-plugin-browserifier
