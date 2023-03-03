@@ -20,8 +20,8 @@ functions:
           path: /heavy
           method: GET
 
-package: 
-  individually: true
+# package: 
+#   individually: true
   
-plugins:
-  - serverless-plugin-browserifier
+# plugins:
+#   - serverless-plugin-browserifier
